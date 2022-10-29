@@ -20,7 +20,8 @@ const userSchema = new Schema({
     },
     phoneNumber: {
         type: String,
-        default: []
+        default: [],
+        unique: true
     },
     passportNumber: {
         type: String,
@@ -29,7 +30,8 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     age: {
         type: Number,
