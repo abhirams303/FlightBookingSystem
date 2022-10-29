@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Booking</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form action="reservation.php" method="post">
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder=" " pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder=" " required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone</label>
+    <input type="tel" id="phone" name=" " placeholder=" " pattern=(\d{5})-?\s?(\d{5})) required>
+  </div>
+  <hr>
+  <div class="elem-group inlined">
+    <label for="adult">Adults</label>
+    <input type="number" id="adult" name="total_adults" placeholder=" " min=" " required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="child">Children</label>
+    <input type="number" id="child" name="total_children" placeholder=" " min="0" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="Date of Journey">Date of Journey</label>
+    <input type="date" id="Date" name="checkin" required>
+  
+  <div class="elem-group">
+    <label for="Seat-selection">Select Seat Preference</label>
+    <select id="Seat-selection" name="seat_preference" required>
+        <option value="">Choose a Seat from the List</option>
+        <option value="Window">Window Side</option>
+        <option value="No Preference">No Preference</option>
+        
+    </select>
+  </div>
+  <hr>
+  <div class="elem-group">
+    <label for="message">Anything Else?</label>
+    <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+  </div>
+  <button type="submit">Book The Seats</button>
+</form>
+<!-- partial -->
+  
+</body>
+</html>
